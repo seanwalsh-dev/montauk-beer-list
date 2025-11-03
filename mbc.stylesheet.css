@@ -1,0 +1,501 @@
+* {
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+}
+
+/* FONTS */
+
+html {
+  font-size: 18px;
+}
+
+h2 {
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.beer-info {
+  font-family: raleway;
+  font-weight:600;
+  font-size: 1.125rem;
+}
+
+p {
+  font-family: open sans;
+  font-size: 1rem;
+}
+
+a {
+  font-family: Montserrat;
+  font-weight: 300;
+  font-size: 1rem;
+}
+
+/* HEADER */
+
+/* hero page */
+
+#name-logo{
+  margin-top: 4%;
+}
+
+.hero-img {
+  display: block;
+  width: 50%;
+  height: auto;
+  margin: 20px auto;
+  position: relative;
+  z-index: -1;
+}
+
+#beer-can-box-shadow {
+  box-shadow: 0 -5px 10px inset white;
+  /*border-radius: 0 0 75% 75%;
+  overflow: hidden;*/  /*makes div bigger instead of hiding overflow*/
+
+  
+}
+
+/* /hero page */
+
+/* nav */
+
+nav ul {
+  display: flex;
+  justify-content: space-evenly;
+  text-wrap: wrap;
+  text-align: center;
+  list-style-type: none;
+  
+}
+
+li a {
+  color: black;
+  text-decoration: none;
+}
+
+li a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+li a:hover {
+  color: black;
+  text-decoration: none;
+}
+
+nav li {
+  border: 1px solid transparent;
+  height: 5rem;
+  margin-top: 3rem;
+}
+
+
+
+/*.wave:hover {
+  width: 25%;
+  opacity: 1.0;
+}*/
+
+.wave {
+  width: 25px;
+  /*opacity: .0;*/
+  display: none;
+}
+
+nav li:hover .wave {
+  display: initial;
+  padding: 0;
+  width: 25px;
+  overflow: hidden;
+}
+
+/* /nav */
+
+/*MAIN*/
+
+/* ALL SECTIONS */
+
+.section-container {
+  display: flex;
+  margin-bottom: 5vw;
+}
+
+.section-can-container {
+  width: 15%;
+}
+
+.section-can {
+  /*stretches at thin viewport due to auto height tranparent div
+  perhaps put in own div?*/
+  width: 100%;
+  height: auto;
+  position: relative;
+  /*object-fit: contain;*/
+}
+
+.transparent {
+  height: auto; /*25vw;/* auto is good for transparent but makes can strentch at thin viewport*/
+  width: 75vw;  
+  display: inline-block;
+  margin: 1.5vw auto;
+  /*box-shadow: 0 0 2px 1px #ffffff;*/
+  padding: 1.5vw 3vw;
+
+}
+
+.less-transparent {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.more-transparent {
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+.beer-info-container {
+  display: flex;
+  justify-content:space-around;
+}
+
+/* SECTION: WAVE CHASER */
+
+.right-triangle {
+  width: 0px;
+  height: 0px;
+  border-top: 0px solid transparent;
+  border-left: 97.5vw solid #B165CC;
+  border-right: 0px solid transparent;
+  border-bottom: 28.9vw solid transparent;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+/* SECTION: Driftwood Ale */
+
+.yellow-background {
+  background-color: #ead600;
+  width: 97.5vw;
+  height: 28.9vw;
+  display: inline; 
+  margin-left: 5.3%;
+  position: absolute;
+  z-index: -1;
+  overflow: hidden;
+}
+
+.triangle-top {
+  width: 0px;
+  height: 0px;
+  border-top: 9.63vw solid #ffffff;
+  border-left: 9.63vw solid transparent;
+  border-right: 9.63vw solid transparent;
+  border-bottom: 9.63vw solid transparent;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  left: 42.5%;
+}
+
+.triangle-bottom {
+  width: 0px;
+  height: 0px;
+  border-top: 9.63vw solid transparent;
+  border-left: 9.63vw solid transparent;
+  border-right: 9.63vw solid transparent;
+  border-bottom: 9.63vw solid #ffffff;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  left: 42.5%;
+  bottom: 0;
+}
+
+.triangle-left {
+  width: 0px;
+  height: 0px;
+  border-top: 32.5vw solid transparent;
+  border-left: 32.5vw solid #fff;
+  border-right: 32.5vw solid transparent;
+  border-bottom: 32.5vw solid transparent;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  left: 0;
+  top: -60%
+}
+
+.triangle-right {
+  width: 0px;
+  height: 0px;
+  border-top: 32.5vw solid transparent;
+  border-left: 32.5vw solid transparent;
+  border-right: 32.5vw solid #fff;
+  border-bottom: 32.5vw solid transparent;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  right: -4.5vw;
+  top: -60%
+}
+
+/* SECTION: Summer Ale */
+
+.stripe-container {
+  width: 97.5vw;
+  height: 28.9vw;
+  margin: 0;
+  position: absolute;
+}
+
+.stripe-top {
+  width: 97.5vw;
+  height: 9.63vw;
+  background-color: #42b3c8;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+}
+
+.stripe-middle {
+  width: 97.5vw;
+  height: 9.63vw;
+  background-color: #fff;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  bottom: 9.63vw;
+}
+
+.stripe-bottom {
+  width: 97.5vw;
+  height: 9.63vw;
+  background-color: #42b3c8;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  top: 19.26vw;
+}
+
+/* SECTION: Summer Ale */
+
+.pink-circle-container {
+  width: 97.5vw;
+  height: 28.9vw;
+  margin: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.pink-circle {
+  /*width: 97.5vw;
+  height: 97.5vw;
+  background-color: #dc6b63;
+  border-radius: 50%;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  top: -115%;
+  right: -20%;
+  z-index: -1;*/
+
+  width: 97.5vw;
+  height: 97.5vw;
+  background-color: #dc6b63;
+  border-radius: 50%;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  top: -115%;
+  right: -50%;
+  z-index: -1;
+}
+
+/* SECTION: Pumpkin Ale */
+
+.orange-circle-container {
+  width: 97.5vw;
+  height: 28.9vw;
+  margin: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.orange-circle {
+  width: 82.875vw;
+  height: 82.875vw;
+  /*width: 90.1857vw;
+  height: 90.1857vw;*/
+
+  background-color: #f46f23;
+  border-radius: 50%;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  /*left: 11.5%;*/
+  left: 15.1%
+}
+
+/* SECTION: Pumpkin Ale */
+
+.blue-triangle-container {
+  width: 97.5vw;
+  height: 28.9vw;
+  margin: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.blue-triangle {
+  width: 0px;
+  height: 0px;
+  border-top: 48.75vw solid transparent;
+  border-left: 48.75vw solid #2aa4d1;
+  border-right: 48.75vw solid transparent;
+  border-bottom: 48.75vw solid transparent;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: -120%;
+}
+
+/* SECTION: cold day */
+
+.wave-container {
+  width: 97.5vw;
+  height: 28.9vw;
+  margin: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.white-top {
+  width: 97.5vw;
+  height: 14.45vw;
+  background-color: #fff;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -2;
+}
+
+.green-bottom {
+  width: 97.5vw;
+  height: 14.45vw;
+  background-color: #99C0A7;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -2;
+  bottom: 0;
+}
+
+.green-circle {
+  width: 97.5vw;
+  height: 97.5vw;
+  background-color: #99C0A7;
+  border-radius: 50%;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  left: -25%;
+  top: 25%;
+}
+
+.white-circle {
+  width: 97.5vw;
+  height: 97.5vw;
+  background-color: #fff;
+  border-radius: 50%;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -2;
+  right: -27%;
+  top: -263%;
+}
+
+/* SECTION: belgian white */
+
+.belgian-yellow-container {
+  width: 97.5vw;
+  height: 28.9vw;
+  margin: 0;
+  position: absolute;
+  background-color: #f7d000;
+  z-index: -2;
+}
+
+.belgian-triangle-left {
+  width: 0px;
+  height: 0px;
+  border-top: 0 solid transparent;
+  border-left: 48.75vw solid #fff;
+  border-right: 0vw solid transparent;
+  border-bottom: 28.9vw solid transparent;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.belgian-triangle-right {
+  width: 0px;
+  height: 0px;
+  border-top: 28.9vw solid transparent;
+  border-left: 0vw solid transparent;
+  border-right: 48.75vw solid #fff;
+  border-bottom: 0 solid transparent;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+}
+
+/* SECTION: the surf beer */
+
+.squares-container {
+  width: 97.5vw;
+  height: 28.9vw;
+  margin: 0;
+  position: absolute;
+  overflow: hidden;
+}
+
+.square-top-left {
+  width: 48.75vw;
+  height: 14.45vw;
+  background-color: #009f9d;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  top: 0;
+}
+
+.square-bottom-right {
+  width: 48.75vw;
+  height: 14.45vw;
+  background-color: #009f9d;
+  display: inline; 
+  margin: 0;
+  position: absolute;
+  z-index: -1;
+  right: 0;
+  bottom: 0;
+}
