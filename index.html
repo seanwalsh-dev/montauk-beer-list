@@ -8,20 +8,53 @@
 
   <!--Montserrat, Raleway, Open Sans, Playfair Display-->
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" type="text/css" href="style.css" />
   <link rel="icon" href="favicon.png">
+
 </head>
 <body>
+
+  <div class="hamburger" id="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+
+  <div class="hamburger-modal hidden" id="hamburger-modal">
+    <nav class="hamburger-nav" id="hamburger-nav">
+      <ul>
+        <li><a href="#section-wave-chaser">Wave Chaser IPA</a></li>
+        <li><a href="#section-driftwood">Driftwood Ale</a></li>
+        <li><a href="#section-summer">Summer Ale</a></li>
+        <li><a href="#section-watermelon">Watermelon Session Ale</a></li>
+        <li><a href="#section-pumkin">Pumpkin Ale</a></li>
+        <li><a href="#section-pilsner">Pilsner</a></li>
+        <li><a href="#section-cold-day">Cold Day IPA</a></li>
+        <li><a href="#section-belgian">Belgian White</a></li>
+        <li><a href="#section-surf">The Surf Beer</a></li>
+      </ul>
+    </nav>
+  </div>
+
   <header>
-    <img id="name-logo" class="hero-img" src="pictures/logo/name-logo-2,560x951.jpg" alt="Montauk Brewing Company logo">
-    <div id="beer-can-box-shadow"><img id="hero-cans" class="hero-img" src="pictures/cans/cans-959x640.webp" alt="popular Montauk Brewing Company beer cans"></div>
+    <img 
+      id="name-logo" 
+      class="hero-img" 
+      src="pictures/logo/name-logo-2,560x951.jpg" 
+      alt="Montauk Brewing Company logo">
+
+    <div id="beer-can-box-shadow">
+      <img 
+        id="hero-cans" 
+        class="hero-img" 
+        src="pictures/cans/cans-959x640.webp" 
+        alt="popular Montauk Brewing Company beer cans">
+    </div>
     <nav class="nav" id="nav">
       <ul>
-        <li><a href="#name-logo">Top<br>
-        <img class="wave" src="pictures/logo/wave.png" alt=""></a></li>
         <li><a href="#section-wave-chaser">Wave Chaser <br>IPA<br>
           <img class="wave" src="pictures/logo/wave.png" alt=""></a></li>
         <li><a href="#section-driftwood">Driftwood <br>Ale<br>
@@ -215,5 +248,8 @@
       </div>
     </section>
   </main>  
+
+  <script src="script.js"></script>
+
 </body>
 </html>
